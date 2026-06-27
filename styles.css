@@ -67,6 +67,17 @@ h2 {
   font-size: clamp(1.5rem, 5vw, 2.3rem);
 }
 
+.prize-callout {
+  display: inline-block;
+  margin: 22px 0 0;
+  padding: 10px 12px;
+  border: 1px solid var(--success-line);
+  border-radius: 6px;
+  color: var(--accent-strong);
+  font-weight: 900;
+  background: var(--success-bg);
+}
+
 .riddle {
   margin: 28px 0 0;
   font-size: clamp(1.2rem, 3.6vw, 1.75rem);
