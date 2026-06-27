@@ -1,14 +1,14 @@
 const CONFIG = {
-  title: "Riddle Redemption",
-  riddle: "I open only for the phrase chosen by the keeper. What is the code?",
-  hint: "Temporary demo code: sample-code",
+  title: "Bowling Green Family Challenge",
+  riddle: "This answer is not hiding online. Start with Dad's birthday month and day, then Mom's birthday month and day, then the loyal four-legged friend the family remembers. Use this format: MMDD-MMDD-name",
+  hint: "No years. Lowercase the name. Example format: 0101-1231-name",
   verifierIterations: 150000,
-  verifierSaltB64: "iWdlJpjYORGTcFRX+Z3L2w==",
-  verifierHashB64: "Tolg964yNnQTc5Z5jNbihX5MkIbgfotRtFy5z286ysM=",
+  verifierSaltB64: "MjI3i6kr53eBtAvW2JXb2A==",
+  verifierHashB64: "2jpLjroSzaJXaXJwpIugfYUHdhGShgOrrAOjbiY9tqk=",
   keyIterations: 250000,
-  keySaltB64: "PlJvFTsBjbsga8d3Z2a+UA==",
-  rewardIvB64: "K+clI0S7N+U5RBga",
-  rewardCiphertextB64: "wWaksW3UhsFfKB/QyOw8iwEx+wIUXxgljjDaQv5ImqSjaFE5f5dyZ4UtUP2qxoU5iL+lBch1ur3oINi7zkOtqM/fJOYJS0CFkqoY5R3hA4WL7CcxVx3cT4CeR0Oh94E="
+  keySaltB64: "+iwIaNAXZB8ZZ6NLy8bFMw==",
+  rewardIvB64: "XzXaY84WEX9jaFhu",
+  rewardCiphertextB64: "9UEjvdzw3gSS+QToSxuUOcGO/b6LA45JsBrreB8GqVbNKTiyWZmwKYbBsWrJsN/sGbU+IKhufojIwWUyPybycBmNh5DO2jUwkE0xrXlknDQmyjbkNx2M7KzXWVQi03vupRcvpfeEiIGbIdh5du6/S5nJgm5byDRLPqKbNl0lYKxOrjjD3w=="
 };
 
 const form = document.querySelector("#unlock-form");
