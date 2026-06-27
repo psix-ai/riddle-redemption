@@ -28,6 +28,14 @@
           <p class="eyebrow">Access Granted</p>
           <h2>Redemption</h2>
           <div id="reward" class="reward-text"></div>
+          <form id="venmo-form" class="venmo-form">
+            <label for="venmo-id">Venmo username</label>
+            <div class="entry">
+              <input id="venmo-id" name="venmo-id" type="text" autocomplete="off" spellcheck="false" placeholder="@username" required>
+              <button type="submit">Send Claim</button>
+            </div>
+            <p id="venmo-status" class="status note" role="status" aria-live="polite"></p>
+          </form>
         </section>
       </section>
     </main>
