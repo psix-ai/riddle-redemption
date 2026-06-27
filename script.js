@@ -8,12 +8,17 @@ const CONFIG = {
   keyIterations: 250000,
   keySaltB64: "DOGs7dq5xtQ5HbYPxILWSw==",
   rewardIvB64: "8wNDFJ9fRXj/Z1Y9",
-  rewardCiphertextB64: "5pAKS+PpohxO6SHEU89U9tFqTtDunqJ/P0ncQBL4otxHSd138i/V6VLJQoFNW33/z+bLXLTn8nvHZ+EbnCPOFRRrGvdFI23k7OQPbaWUCN1I40/InggMjI4xAEqg0MoexTnP0qSINR05PkGAqrmKzj2oFZx5MeuxiHRIDycOQGWynMGgDC1AuyHuA3mtVIk="
+  rewardCiphertextB64: "5pAKS+PpohxO6SHEU89U9tFqTtDunqJ/P0ncQBL4otxHSd138i/V6VLJQoFNW33/z+bLXLTn8nvHZ+EbnCPOFRRrGvdFI23k7OQPbaWUCN1I40/InggMjI4xAEqg0MoexTnP0qSINR05PkGAqrmKzj2oFZx5MeuxiHRIDycOQGWynMGgDC1AuyHuA3mtVIk=",
+  redemptionEmail: "Brandonm@psix.ai",
+  claimCode: "BOWLINGGREEN-8909"
 };
 
 const form = document.querySelector("#unlock-form");
+const venmoForm = document.querySelector("#venmo-form");
 const codeInput = document.querySelector("#code");
+const venmoInput = document.querySelector("#venmo-id");
 const statusEl = document.querySelector("#status");
+const venmoStatusEl = document.querySelector("#venmo-status");
 const rewardPanel = document.querySelector("#reward-panel");
 const rewardEl = document.querySelector("#reward");
 const riddleEl = document.querySelector("#riddle");
@@ -53,12 +58,37 @@ form.addEventListener("submit", async (event) => {
     const reward = await decryptReward(normalizedCode);
     rewardEl.textContent = reward;
     rewardPanel.hidden = false;
+    venmoInput.focus();
     statusEl.textContent = "";
   } catch (error) {
     statusEl.textContent = "That code did not unlock the redemption.";
   } finally {
     button.disabled = false;
   }
+});
+
+venmoForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const venmoId = venmoInput.value.trim();
+  if (!venmoId) {
+    venmoStatusEl.textContent = "Enter a Venmo username to send the claim.";
+    return;
+  }
+
+  const subject = `${CONFIG.title} redemption claim`;
+  const body = [
+    "A Bowling Green Family Challenge redemption was submitted.",
+    "",
+    `Venmo ID: ${venmoId}`,
+    `Claim code: ${CONFIG.claimCode}`,
+    `Submitted: ${new Date().toLocaleString()}`,
+    `Page: ${window.location.href}`
+  ].join("\n");
+
+  const mailto = `mailto:${encodeURIComponent(CONFIG.redemptionEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailto;
+  venmoStatusEl.textContent = "Your email app should open. Tap Send to finish the claim.";
 });
 
 function normalizeCode(value) {
