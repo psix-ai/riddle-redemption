@@ -24,6 +24,16 @@ const rewardEl = document.querySelector("#reward");
 const riddleEl = document.querySelector("#riddle");
 const hintEl = document.querySelector("#hint");
 const titleEl = document.querySelector("#page-title");
+const rejectionMessages = [
+  "try again dumbass",
+  "not even close",
+  "swing and a miss",
+  "math is hard, try again",
+  "nope, run the numbers again",
+  "wrong answer, champ",
+  "the $50 remains safe",
+  "recalculate and come back"
+];
 
 titleEl.textContent = CONFIG.title;
 document.title = CONFIG.title;
@@ -51,7 +61,7 @@ form.addEventListener("submit", async (event) => {
 
     const isValid = await verifyCode(normalizedCode);
     if (!isValid) {
-      statusEl.textContent = "try again dumbass";
+      statusEl.textContent = getRandomRejection();
       return;
     }
 
@@ -61,7 +71,7 @@ form.addEventListener("submit", async (event) => {
     venmoInput.focus();
     statusEl.textContent = "";
   } catch (error) {
-    statusEl.textContent = "try again dumbass";
+    statusEl.textContent = getRandomRejection();
   } finally {
     button.disabled = false;
   }
@@ -94,6 +104,10 @@ venmoForm.addEventListener("submit", (event) => {
 
 function normalizeCode(value) {
   return value.trim().toLowerCase();
+}
+
+function getRandomRejection() {
+  return rejectionMessages[Math.floor(Math.random() * rejectionMessages.length)];
 }
 
 async function verifyCode(code) {
