@@ -1,14 +1,14 @@
 const CONFIG = {
   title: "Bowling Green Family Challenge",
-  riddle: "This answer is not hiding online. Start with Dad's birthday month and day, then Mom's birthday month and day, then the loyal four-legged friend the family remembers. Use this format: MMDD-MMDD-name",
-  hint: "No years. Lowercase the name. Example format: 0101-1231-name",
+  riddle: "Two dates guard our door. For each birthday, use the day, the month, and the two-digit year. Add those pieces together, then combine both dates to start.\n\nNow add the number where home begins.\n\nAdd kid one and kid two by age. Getting close, you may be.\n\nAdd the age when college began. Add the size of the first motorcycle. Add the year of the Corvette too.\n\nAlmost there.\n\nSubtract the letters in my childhood dog's name. Subtract where I rank, from 1 to 5, as the greatest brother of all time. Subtract the prime number with a biblical echo, somewhere between 1 and 150.\n\nEnter the final number.",
+  hint: "Birthday rule: DD + MM + YY. Use only the first number of home, not the ZIP.",
   verifierIterations: 150000,
-  verifierSaltB64: "MjI3i6kr53eBtAvW2JXb2A==",
-  verifierHashB64: "2jpLjroSzaJXaXJwpIugfYUHdhGShgOrrAOjbiY9tqk=",
+  verifierSaltB64: "z1yvzLKNtbgVEyOLlG8wAw==",
+  verifierHashB64: "spXQZSsdkewckSw+Mi+3nqEaEPEpjZv6C+norQLxQs8=",
   keyIterations: 250000,
-  keySaltB64: "+iwIaNAXZB8ZZ6NLy8bFMw==",
-  rewardIvB64: "XzXaY84WEX9jaFhu",
-  rewardCiphertextB64: "9UEjvdzw3gSS+QToSxuUOcGO/b6LA45JsBrreB8GqVbNKTiyWZmwKYbBsWrJsN/sGbU+IKhufojIwWUyPybycBmNh5DO2jUwkE0xrXlknDQmyjbkNx2M7KzXWVQi03vupRcvpfeEiIGbIdh5du6/S5nJgm5byDRLPqKbNl0lYKxOrjjD3w=="
+  keySaltB64: "DOGs7dq5xtQ5HbYPxILWSw==",
+  rewardIvB64: "8wNDFJ9fRXj/Z1Y9",
+  rewardCiphertextB64: "5pAKS+PpohxO6SHEU89U9tFqTtDunqJ/P0ncQBL4otxHSd138i/V6VLJQoFNW33/z+bLXLTn8nvHZ+EbnCPOFRRrGvdFI23k7OQPbaWUCN1I40/InggMjI4xAEqg0MoexTnP0qSINR05PkGAqrmKzj2oFZx5MeuxiHRIDycOQGWynMGgDC1AuyHuA3mtVIk="
 };
 
 const form = document.querySelector("#unlock-form");
