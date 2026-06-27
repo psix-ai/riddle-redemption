@@ -1,6 +1,6 @@
 const CONFIG = {
   title: "Bowling Green Family Challenge",
-  riddle: "Two dates guard our door.\n\nFor each birthday, use the day, the month, and the two-digit year.\nAdd those pieces together, then combine both dates to start.\n\nAdd the number where home begins.\nAdd kid one's age.\nAdd kid two's age.\nAdd the age when college began.\nAdd the size of the first motorcycle.\nAdd the year of the Corvette.\n\nAlmost there.\n\nSubtract the letters in my childhood dog's name.\nSubtract where I rank, from 1 to 5, as the greatest brother of all time.\nSubtract the prime number with a biblical echo, somewhere between 1 and 150.\n\nEnter the final number.",
+  riddle: "Two dates guard our door.\n\nFor each birthday, use the day, the month, and the two-digit year.\nAdd those pieces together, then combine both dates to start.\n\n- Add the number where home begins.\n- Add kid one's age.\n- Add kid two's age.\n- Add the age when college began.\n- Add the size of the first motorcycle.\n- Add the year of the Corvette.\n\nAlmost there.\n\n- Subtract the letters in my childhood dog's name.\n- Subtract where I rank, from 1 to 5, as the greatest brother of all time.\n- Subtract the prime number with a biblical echo, somewhere between 1 and 150.\n\nEnter the final number.",
   hint: "Birthday rule: DD + MM + YY. Use only the first number of home, not the ZIP.",
   verifierIterations: 150000,
   verifierSaltB64: "YOjkrNGXdjPMP/ZGcQ/QMQ==",
