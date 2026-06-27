@@ -1,6 +1,6 @@
 const CONFIG = {
   title: "Bowling Green Family Challenge",
-  riddle: "Two dates guard our door. For each birthday, use the day, the month, and the two-digit year. Add those pieces together, then combine both dates to start.\n\nNow add the number where home begins.\n\nAdd kid one and kid two by age. Getting close, you may be.\n\nAdd the age when college began. Add the size of the first motorcycle. Add the year of the Corvette too.\n\nAlmost there.\n\nSubtract the letters in my childhood dog's name. Subtract where I rank, from 1 to 5, as the greatest brother of all time. Subtract the prime number with a biblical echo, somewhere between 1 and 150.\n\nEnter the final number.",
+  riddle: "Two dates guard our door.\n\nFor each birthday, use the day, the month, and the two-digit year.\nAdd those pieces together, then combine both dates to start.\n\nAdd the number where home begins.\nAdd kid one's age.\nAdd kid two's age.\nAdd the age when college began.\nAdd the size of the first motorcycle.\nAdd the year of the Corvette.\n\nAlmost there.\n\nSubtract the letters in my childhood dog's name.\nSubtract where I rank, from 1 to 5, as the greatest brother of all time.\nSubtract the prime number with a biblical echo, somewhere between 1 and 150.\n\nEnter the final number.",
   hint: "Birthday rule: DD + MM + YY. Use only the first number of home, not the ZIP.",
   verifierIterations: 150000,
   verifierSaltB64: "YOjkrNGXdjPMP/ZGcQ/QMQ==",
@@ -51,7 +51,7 @@ form.addEventListener("submit", async (event) => {
 
     const isValid = await verifyCode(normalizedCode);
     if (!isValid) {
-      statusEl.textContent = "That code did not unlock the redemption.";
+      statusEl.textContent = "try again dumbass";
       return;
     }
 
@@ -61,7 +61,7 @@ form.addEventListener("submit", async (event) => {
     venmoInput.focus();
     statusEl.textContent = "";
   } catch (error) {
-    statusEl.textContent = "That code did not unlock the redemption.";
+    statusEl.textContent = "try again dumbass";
   } finally {
     button.disabled = false;
   }
