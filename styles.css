@@ -82,6 +82,10 @@ h2 {
   margin-top: 30px;
 }
 
+.venmo-form {
+  margin-top: 22px;
+}
+
 label {
   display: block;
   margin-bottom: 8px;
@@ -137,6 +141,11 @@ button:disabled {
   min-height: 1.4em;
   margin: 12px 0 0;
   color: var(--warning);
+  font-weight: 700;
+}
+
+.note {
+  color: var(--muted);
   font-weight: 700;
 }
 
