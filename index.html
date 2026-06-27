@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Riddle Redemption</title>
+    <meta name="description" content="Solve the riddle to unlock the redemption.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel" aria-labelledby="page-title">
+        <p class="eyebrow">Digital Access</p>
+        <h1 id="page-title">Riddle Redemption</h1>
+        <p id="riddle" class="riddle"></p>
+        <p id="hint" class="hint" hidden></p>
+
+        <form id="unlock-form" class="form">
+          <label for="code">Enter the code</label>
+          <div class="entry">
+            <input id="code" name="code" type="text" autocomplete="off" spellcheck="false" required>
+            <button type="submit">Unlock</button>
+          </div>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+
+        <section id="reward-panel" class="reward" hidden>
+          <p class="eyebrow">Access Granted</p>
+          <h2>Redemption</h2>
+          <div id="reward" class="reward-text"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
